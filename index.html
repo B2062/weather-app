@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>  
+    <style>
+        body {
+            background: 145deg, skyblue, lightblue;
+            background-image: url("https://wallpapercave.com/wp/yRzA3uZ.jpg");
+        }
+        .weather {
+            padding: 20px;
+        }
+        .search {
+            width: 700px;
+            background: linear-gradient(135deg, skyblue, #5b548a);
+            color: #fff;
+            margin: auto;
+            margin-top: 100px;
+            border-radius: 20px;
+            padding: 40px 35px;
+            text-align: center;
+        }
+        .text-search {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .text-search input {
+            border: 0;
+            outline: 0;
+            background: #ebfffc;
+            color: #555;
+            padding: 10px 25px;
+            height: 60px;
+            border-radius: 30px;
+            cursor: pointer;
+            width: 200px;
+            flex: 1;
+            margin-right: 16px;
+            font-size: 18px;
+        }
+        .text-search button {
+            border: 0;
+            outline: 0;
+            background: #ebfffc;
+            height: 80px;
+            border-radius: 30%;
+            cursor: pointer;
+            width: 80px;
+        }
+        .search button img {
+            width: 40px;
+        }
+        .weather h1 {
+            font-size: 50px;
+            font-weight: 400;
+            margin-top: -10px;
+        }
+        .detail {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+            margin-top: 50px;
+        }
+        .col1 img, .col img {
+            mix-blend-mode: multiply;
+            width: 150px;
+        }
+        button {
+            background-color: #4CAF50; 
+            color: white;
+            padding: 10px 20px; 
+            font-size: 16px; 
+            border: none; 
+            border-radius: 5px; 
+            cursor: pointer; 
+        }
+        button:hover {
+            background-color: #555;
+        }
+        footer {
+            text-align: center;
+            padding: 2px;
+            background-color: #333;
+            color: #fff;
+            background-color: #4CAF50;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <a href="main.php">
+        <button>SEE FORECAST DATA</button>
+    </a>
+    <div class="search">
+        <div class="text-search">
+            <input type="text" id="cityInput" placeholder="Enter the city name" spellcheck="false" name="boxInput">
+            <button onclick="searchWeather()"><img src="https://uxwing.com/wp-content/themes/uxwing/download/user-interface/search-icon.png"></button>
+        </div>
+        <div id="weather">
+            <h1 class="temperature"></h1>
+            <h1 class="city">Rewa</h1>
+        </div>
+        <div class="detail">
+            <div class="col1">
+                <div>
+                    <p class="wind"></p>
+                    <p>Wind Speed</p>
+                </div>
+            </div>
+            <div class="col">
+                <div>
+                    <p class="humidity"></p>
+                    <p>Humidity</p>   
+                </div>
+            </div>
+            <div class="col">
+                <p>Pressure</p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Weather App. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
